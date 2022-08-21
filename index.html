@@ -1,0 +1,245 @@
+<!DOCTYPE html> <html lang="en" dir="ltr">
+	<head id='core'> <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title id="title">frossy</title>
+		<link rel="stylesheet" href="style.css">
+		<!-- Twemoji for Life <3 -->
+		<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+		<style> img.emoji { width: 1em; margin-top: 1vh; pointer-events: none; } </style>
+	</head>
+	
+	<body id='body' class='nosel' onload='init(); post(); twemojiParse()'>
+		<script src="main.js"></script>
+		<div style='width: 100%; height: 1vmin; background: #555; position: fixed'>
+			<div id='scroll_indicator' style='height: 1vmin; background: var(--accentSub); position: fixed'></div>
+		</div>
+		
+		<div id='body_frame' class='bounded'>
+			<div class='break' style='height: 3vmin'></div>
+			
+			<div class='sector'>
+				<p class='title'>Welcome to the sussiest frontend walkthrough out there!</p>
+				<div class='blockB' style='width: 70%; height: auto; background: #222'>
+					<p id='raw0' style='margin: 2vmin; font-size: 2.6vmin'></p>
+				</div>
+				<div class='break' style='height: 3vmin'></div>
+				<div class='badge center' style='padding: 2vmin 5vmin; border-radius: 10vmin; font-size: 6vmin' onclick="MiniBatch()">MiniBatch</div>
+			</div>
+			
+			<div id='_html' class='sector'>
+				<p class='title'>HTML - Language for element arrangement</p>
+				
+				<div class='sector'>
+					<div class='blockB' style='background-image: none'>(here must've been an image)</div>
+					<div class='blockFrame'>
+						<div class='blockA'>
+							<div class='blockTop'>Hover over me!</div>
+							<div class='blockMid' id='raw1' onclick="clip('raw1')"></div>
+						</div>
+						<p class='blockAHint'><x class='blockAText'></x></p>
+					</div>
+				</div>
+				
+				<div class='sector'>
+					<div class='blockB' style='border: 1px solid var(--accentFont); background: #444'>
+						<div class='blockMid' style='height: 90%' id='msg1'></div>
+					</div>
+					<div class='blockFrame'>
+						<div class='blockA'>
+							<div class='blockTop'>Basic syntax</div>
+							<div class='blockMid' id='raw2' onclick="clip('raw2')"></div>
+						</div>
+						<p class='blockAHint'><x class='blockAText'></x></p>
+					</div>
+				</div>
+				
+				<div class='sector'>
+					<div class='blockB' style='background-image: none'>(here must've been an image)</div>
+					<div class='blockFrame'>
+						<div class='blockA'>
+							<div class='blockTop'>Basic elements</div>
+							<div class='blockMid' id='raw3' onclick="clip('raw3')"></div>
+						</div>
+						<p class='blockAHint'><x class='blockAText'></x></p>
+					</div>
+				</div>
+				
+				<div class='sector'>
+					<div class='blockB' style='background-image: none'>(here must've been an image)</div>
+					<div class='blockFrame'>
+						<div class='blockA'>
+							<div class='blockTop'>Basic parameters</div>
+							<div class='blockMid' id='raw4' onclick="clip('raw4')"></div>
+						</div>
+						<p class='blockAHint'><x class='blockAText'></x></p>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div id='_css' class='sector'>
+				<p class='title'>CSS - Language for element stylizing</p>
+				
+				<div class='sector'>
+					<div class='blockB' style='background-image: none'>(here must've been an image)</div>
+					<div class='blockFrame'>
+						<div class='blockA'>
+							<div class='blockTop'>Intro</div>
+							<div class='blockMid' id='raw5' onclick="clip('raw5')"></div>
+						</div>
+						<p class='blockAHint'><x class='blockAText'></x></p>
+					</div>
+				</div>
+				
+				<div class='sector'>
+					<div class='blockB' style='background-image: none'>(here must've been an image)</div>
+					<div class='blockFrame'>
+						<div class='blockA'>
+							<div class='blockTop'>Basic syntax</div>
+							<div class='blockMid' id='raw6' onclick="clip('raw6')"></div>
+						</div>
+						<p class='blockAHint'><x class='blockAText'></x></p>
+					</div>
+				</div>
+				
+				<div class='sector'>
+					<div class='blockB' style='background-image: none'>(here must've been an image)</div>
+					<div class='blockFrame'>
+						<div class='blockA'>
+							<div class='blockTop'>Basic bodies</div>
+							<div class='blockMid' id='raw7' onclick="clip('raw7')"></div>
+						</div>
+						<p class='blockAHint'><x class='blockAText'></x></p>
+					</div>
+				</div>
+				
+				<div class='sector'>
+					<div class='blockB' style='background-image: none'>(here must've been an image)</div>
+					<div class='blockFrame'>
+						<div class='blockA'>
+							<div class='blockTop'>Basic parameters</div>
+							<div class='blockMid' id='raw8' onclick="clip('raw8')"></div>
+						</div>
+						<p class='blockAHint'><x class='blockAText'></x></p>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div id='_js' class='sector' style='margin-bottom: 0'>
+				<p class='title'>JavaScript - A frontend scripting language</p>
+				
+				<div class='sector'>
+					<div class='blockB' style='background-image: none'>(here must've been an image)</div>
+					<div class='blockFrame'>
+						<div class='blockA'>
+							<div class='blockTop'>Intro</div>
+							<div class='blockMid' id='raw9' onclick="clip('raw9')"></div>
+						</div>
+						<p class='blockAHint'><x class='blockAText'></x></p>
+					</div>
+				</div>
+				
+				<div class='sector'>
+					<div class='blockB' style='background-image: none'>(here must've been an image)</div>
+					<div class='blockFrame'>
+						<div class='blockA'>
+							<div class='blockTop'>Basic syntax</div>
+							<div class='blockMid' id='raw10' onclick="clip('raw10')"></div>
+						</div>
+						<p class='blockAHint'><x class='blockAText'></x></p>
+					</div>
+				</div>
+				
+				<div class='sector'>
+					<div class='blockB' style='background-image: none'>(here must've been an image)</div>
+					<div class='blockFrame'>
+						<div class='blockA'>
+							<div class='blockTop'>Basic operators</div>
+							<div class='blockMid' id='raw11' onclick="clip('raw11')"></div>
+						</div>
+						<p class='blockAHint'><x class='blockAText'></x></p>
+					</div>
+				</div>
+				
+				<div class='sector'>
+					<div class='blockB' style='background-image: none'>(here must've been an image)</div>
+					<div class='blockFrame'>
+						<div class='blockA'>
+							<div class='blockTop'>Basic global functions</div>
+							<div class='blockMid' id='raw12' onclick="clip('raw12')"></div>
+						</div>
+						<p class='blockAHint'><x class='blockAText'></x></p>
+					</div>
+				</div>
+				
+				<div class='sector'>
+					<div class='blockB' style='background-image: none'>(here must've been an image)</div>
+					<div class='blockFrame'>
+						<div class='blockA'>
+							<div class='blockTop'>Basic templates</div>
+							<div class='blockMid' id='raw13' onclick="clip('raw13')"></div>
+						</div>
+						<p class='blockAHint'><x class='blockAText'></x></p>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<div id='panel'>
+			<div style='margin: 0 2vmin; display: inline; float: left'>
+				<p class='tag' onclick="scroll2('_html')">html</p>
+				<p class='tag' onclick="scroll2('_css')">css</p>
+				<p class='tag' onclick="scroll2('_js')">js</p>
+			</div>
+			<div style='margin: 0 2vmin; display: inline; float: right'>
+				<p class='tag' onclick='fullscreen()' style='float: right; margin: 0 1vmin'>fs</p>
+				<p class='tag' onclick="scroll_bottom('body_frame')" style='float: right; margin: 0 1vmin'>⏷</p>
+				<p class='tag' onclick="scroll_top('body_frame')" style='float: right; margin: 0 1vmin'>⏶</p>
+			</div>
+		</div>
+		
+		<div id='console' class='center bounded'>
+			<div class='center' style='width: 100vw; height: 7vh; margin: 0'>
+				<p class='tag' onclick="
+					document.getElementById('htmlData').value = '';
+					document.getElementById('cssData').value = '';
+					document.getElementById('jsData').value = '' "
+				>clear all</p>
+				<p class='tag' onclick="wipe('@vm');
+					mk('@vm', document.getElementById('htmlData').value);
+					loadsheet(document.getElementById('cssData').value);
+					loadstring(document.getElementById('jsData').value)"
+				>run</p>
+			</div>
+			
+			<div class='blockB' id='consoleInput'>
+				<div class='cDisplay'>
+					<textarea id='htmlData' class='rawData' spellcheck='false'></textarea>
+					<textarea id='cssData' class='rawData' spellcheck='false'></textarea>
+					<textarea id='jsData' class='rawData' spellcheck='false'></textarea>
+				</div>
+				<div class='center' style='position: absolute; bottom: 0; width: 100%; height: 5vmin; background: #777'>
+					<div class='tab' style='background: #b55' onmouseover="pattern('currentX', '#b55'); pattern('current', '#533'); dispSwitch('htmlData')">index.html</div>
+					<div class='tab' style='background: #b95' onmouseover="pattern('currentX', '#b95'); pattern('current', '#543'); dispSwitch('cssData')">style.css</div>
+					<div class='tab' style='background: #95a' onmouseover="pattern('currentX', '#95a'); pattern('current', '#503750'); dispSwitch('jsData')">main.js</div>
+				</div>
+			</div>
+			
+			<div class='blockB' id='consoleOutput'>
+				<div class='cDisplay' id='@vm' style='overflow-y: scroll'></div>
+				<div class='cDisplay' id='log' style='overflow-y: scroll'></div>
+				<div class='center' style='position: absolute; bottom: 0; width: 100%; height: 5vmin; background: #777'>
+					<div class='tab' style='background: #399' onmouseover="pattern('currentB', '#555'); dispSwitch('@vm')">@vm/output</div>
+					<div class='tab' style='background: #395' onmouseover="pattern('currentB', '#222'); dispSwitch('log')">@vm/log</div>
+				</div>
+			</div>
+			
+		</div>
+		<div id='consoleBtn' onmouseover="a8ss('console', 'expandY 0.3s linear forwards', 'shrinkY 0.3s linear forwards')">🛆</div>
+		
+	</body>
+	
+</html>

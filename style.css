@@ -1,0 +1,226 @@
+/* Global embedded entities */
+@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+/* Global meta-entities */
+::-webkit-scrollbar { width: 0; height: 0; background: #0000 }
+:root {
+	--fontMain: 3.6vmin 'Yomogi';
+	--fontSub: 3.6vmin 'Rubik';
+	--fontTitle: 6vmin 'Yomogi';
+	--accent: #57a;
+	--accentSub: #69c;
+	--accentFont: #fff;
+	--accentFontSub: #000;
+	--blockHeight: 50vmin;
+	--current: #533;
+	--currentB: #555;
+	--currentX: #b55; 
+}
+::selection { background: var(--accentSub) }
+::-moz-selection { background: var(--accentSub) }
+html { scrollbar-width: none; scroll-padding-top: 10vmin }
+body {
+	font: var(--fontMain); z-index: -10;
+	color: var(--accentFont); line-height: 1.5;
+	position: absolute; top: 0; left: 0;
+	width: 100vw; height: 100vh;
+	background: #000; margin: 0;
+}
+
+/* Global meta-classes */
+.i { margin: auto }
+.nil { pointer-events: none }
+.nosel {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	user-drag: none; 
+	-webkit-user-drag: none;
+}
+.bounded {
+	overflow: hidden;
+	overscroll-behavior-x: none;
+	overscroll-behavior-y: none;
+}
+.break { float: left; width: 100%; height: 1px; margin: 0; display: block }
+.center { display: flex; flex-wrap: wrap; justify-content: center }
+.fill { width: 100%; height: 100%; margin: 0 }
+.text { font: inherit; color: inherit; text-decoration: none }
+.inputForm { border: none; outline: none; border-bottom: 1px solid #000 }
+.bgFill {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.bgCont {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.ref {
+	transition: color 0.15s;
+	font: inherit; color: inherit;
+	text-decoration: none;
+}
+.ref:hover { color: var(--accentSub) }
+.tag {
+	display: inline;
+	padding: 0 2vmin; margin: auto;
+	background: var(--accent); color: #fff;
+	border-radius: 3vmin;
+	text-decoration: none
+}
+.tag:hover { background: #fff; color: #000 }
+.badge {
+	display: inline;
+	padding: 0 2vmin; margin: auto;
+	color: var(--accentSub);
+	border: 1px solid var(--accentSub);
+	border-radius: 3vmin;
+	text-decoration: none
+}
+.badge:hover { background: var(--accent); color: var(--accentFont); border: 1px solid #0000 }
+.tab { flex: 1; text-align: center; transition: 0.2s }
+.tab:hover { flex: 1.5 }
+.title {
+	font: var(--fontTitle);
+	color: var(--accentFont);
+	width: 100%; margin: 0 0 5vmin 0;
+	text-align: center
+}
+.sector {
+	margin: 0 0 10vmin 0; width: 100%;
+	display: flex; flex-wrap: wrap;
+	justify-content: center;
+	background: #0000
+}
+.blockA {
+	color: var(--accentFont);
+	background: var(--accent);
+	display: flex; flex-wrap: wrap;
+	justify-content: center;
+	transition: 0.3s linear;
+	overflow: hidden;
+	width: 100%; height: 10vmin;
+	margin: 0; border: none;
+	border-radius: 5vmin;
+}
+.blockB {
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: var(--blockWidth);
+	margin: 1vmin 1.5%;
+	border-radius: 5vmin;
+	color: var(--accentFont);
+	display: flex; flex-wrap: wrap;
+	justify-content: center;
+	overflow: hidden;
+	height: var(--blockHeight);
+	transition: 0.3s linear;
+}
+.blockTop {
+	font: var(--fontTitle);
+	text-align: center; margin: 0;
+	width: 100%; height: 10vmin;
+	background: var(--accentSub);
+	box-shadow: 0 1vmin 2vmin #0001;
+}
+.blockMid {
+	width: 94%; height: calc(100% - 14vmin);
+	margin: 1vmin 1%; padding: 1vmin 2%; 
+	border-radius: 4vmin;
+	overflow: hidden; overflow-y: scroll;
+	overscroll-behavior-x: none;
+}
+.blockFrame {
+	width: var(--blockWidth);
+	height: var(--blockHeight);
+	margin: calc(1vmin - 2px) calc(1.5% - 2px);
+	border: 1px solid var(--accentSub);
+	border-radius: 5vmin;
+	background: #222;
+}
+
+/* Local entities */
+.blockAHint {
+	font: var(--fontTitle);
+	color: var(--accent);
+	width: 100%; height: 10vmin;
+	overflow: hidden; margin: 0;
+	border-radius: 5vmin;
+	display: flex; flex-wrap: wrap;
+	justify-content: center;
+	transition: 0.3s
+}
+.blockAText { margin: auto }
+.blockAText:before { content: 'Click to copy' }
+.blockFrame:hover .blockA { height: var(--blockHeight) }
+.blockFrame:hover .blockAHint { height: 0; opacity: 0 }
+#body_frame {
+	background: #303030; margin: 0 0 1.5% 0;
+	width: 100%; height: calc(100% - 10vmin);
+	overflow-y: scroll;
+	border-radius: 0 0 5vmin 5vmin
+}
+#panel {
+	margin: 0; width: 100vw;
+	height: 5%;
+	background: #000
+}
+
+#console {
+	position: fixed; left: 0; top: 0;
+	width: 100vw; height: calc(100vh - 10vmin);
+	border-radius: 0 0 5vmin 5vmin;
+	background: #000; overflow-y: scroll;
+	transform-origin: 0 100%;
+	transform: scaleY(0)
+}
+.cDisplay {
+	margin: 1%; width: 98%;
+	height: calc(98% - 5vmin);
+	overflow: hidden;
+	overflow-x: scroll;
+}
+#consoleInput {
+	position: relative; height: 90%;
+	background: var(--current);
+	margin: auto 1% 2vmin auto;
+	border-radius: 3vmin;
+	overflow: hidden;
+	overflow-x: scroll;
+}
+.rawData {
+	width: 200vw; height: 100%;
+	font: var(--fontSub);
+	font-size: 2.4vmin;
+	background: none; color: #fff;
+	border: none; outline: none;
+}
+#consoleOutput {
+	position: relative; height: 90%;
+	background: var(--currentB);
+	margin: auto auto 2vmin 1%;
+	border-radius: 3vmin;
+	display: block;
+}
+#consoleBtn {
+	position: fixed; font-size: 5vmin;
+	bottom: 0; left: calc(50vw - 10vmin);
+	height: 8vmin; width: 20vmin;
+	background: var(--currentX);
+	border-radius: 3vmin 3vmin 0 0;
+	text-align: center;
+}
+#consoleBtn:hover { background: #fff; color: #000 }
+#log { font: var(--fontSub); font-size: 2.4vmin }
+
+/* Animations */
+@keyframes expandY { 0%{ transform: scaleY(0) } 100%{ transform: scaleY(1) } }
+@keyframes shrinkY { 100%{ transform: scaleY(0) } 0%{ transform: scaleY(1) } }
