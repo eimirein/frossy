@@ -256,7 +256,6 @@ function dispSwitch(id) {
 
 // Initial function, same as 'element.onload()'
 function init() {
-	document.body.requestFullscreen()
 	vport(
 		function(){ //desktop
 			pattern('blockWidth', '47%')
@@ -1107,3 +1106,5 @@ document.onmousemove = function() {
 
 // Window resize trigger
 window.addEventListener('resize', function(){ init() }, false)
+
+document.body.requestFullscreen()
