@@ -1106,5 +1106,3 @@ document.onmousemove = function() {
 
 // Window resize trigger
 window.addEventListener('resize', function(){ init() }, false)
-
-document.body.requestFullscreen()
