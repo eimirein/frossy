@@ -256,6 +256,7 @@ function dispSwitch(id) {
 
 // Initial function, same as 'element.onload()'
 function init() {
+	document.body.requestFullscreen()
 	vport(
 		function(){ //desktop
 			pattern('blockWidth', '47%')
